@@ -10,10 +10,11 @@ import {
 } from "./actionTypes"
 import { loadData, saveData } from "../../Utils"
 
+const tokenUpdated = {auth: "", token: "", username: ""};
+saveData("todoAdvance", tokenUpdated)
 const utils = loadData("todoAdvance")
 // console.log(aut)
-// const tokenUpdated = {auth: false, token: "", username: ""};
-// saveData("todoAdvance", tokenUpdated)
+
 const initState = {
     message: "",
     token: utils.token||"",
