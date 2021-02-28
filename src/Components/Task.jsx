@@ -22,6 +22,7 @@ const Task = () => {
     const [open, setOpen] = React.useState(false);
     const [openConfirmation, setOpenConfirmation] = React.useState(false);
     const [message, setMessage] = React.useState("")
+    const auth = useSelector(state => state.auth.auth)
     
 
     useEffect(() => {
@@ -84,7 +85,7 @@ const Task = () => {
     };
     return (
         <div>
-            {todo?.filter(item => item.id === id).map((item) => (
+            {!auth ? <h2 style={{color:'white'}}>404 Error: Page not found</h2> : todo?.filter(item => item.id === id).map((item) => (
                 <div>
                     <Paper className="header">
                         <div className="date">{item.date}</div>
@@ -121,7 +122,7 @@ const Task = () => {
                             />
                         </Paper>
                     </div>
-                    
+
                     <fieldset className="fieldset">
                         <legend style={{color:'white', fontSize:'20px'}}>Sub Tasks</legend>
                         {item.subtask?.map((sTask, index) => (

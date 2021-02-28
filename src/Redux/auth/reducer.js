@@ -12,7 +12,7 @@ import { loadData, saveData } from "../../Utils"
 
 const initState = {
     message: "",
-    token: loadData("todoAdvance").token||'',
+    // token: loadData("todoAdvance").token||"",
     username: loadData("todoAdvance").username||'',
     isError: false,
     isLoading: false,
