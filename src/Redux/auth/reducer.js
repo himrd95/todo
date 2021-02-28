@@ -10,19 +10,22 @@ import {
 } from "./actionTypes"
 import { loadData, saveData } from "../../Utils"
 
-const tokenUpdated = {auth: "", token: "", username: ""};
-saveData("todoAdvance", tokenUpdated)
+
 const utils = loadData("todoAdvance")
+if (utils === null) {
+    const tokenUpdated = {auth: false, token: "", username: ""};
+    saveData("todoAdvance", tokenUpdated)
+}
 // console.log(aut)
 
 const initState = {
     message: "",
-    token: utils.token||"",
-    username: utils.username||'',
+    token: loadData("todoAdvance").token||"",
+    username: loadData("todoAdvance").username||'',
     isError: false,
     isLoading: false,
     regAuth: false,
-    auth: utils.loggedIn || false,
+    auth: loadData("todoAdvance").loggedIn || false,
     userData: []
 }
 const register_reducer = (state = initState, { type, data, token, username, userDetails}) => {
