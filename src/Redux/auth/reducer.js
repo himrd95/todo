@@ -12,7 +12,7 @@ import { loadData, saveData } from "../../Utils"
 
 const aut = loadData("todoAdvance").loggedIn || false
 console.log(aut)
-const tokenUpdated = {auth: "", token: "", username: ""};
+const tokenUpdated = {auth: aut, token: "", username: ""};
 saveData("todoAdvance", tokenUpdated)
 const initState = {
     message: "",
