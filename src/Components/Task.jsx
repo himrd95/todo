@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import "./Styling/Task.css"
 import AlertDialog from './EditModal'
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory, useParams } from 'react-router';
+import { useParams } from 'react-router';
 import { editTodo, getTodo, updateTodo } from '../Redux/app/action';
 import { Button, Dialog, DialogActions, DialogTitle, Grid, Paper, Slide, Snackbar } from '@material-ui/core';
 import Alert from '@material-ui/lab/Alert';
@@ -16,8 +16,8 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 const Task = () => {
     const dispatch = useDispatch();
     const todo = useSelector(state => state.app.todo)
-    const isError = useSelector(state => state.app.isError);
-    const isLoading = useSelector(state => state.app.isLoading);
+    // const isError = useSelector(state => state.app.isError);
+    // const isLoading = useSelector(state => state.app.isLoading);
     const id = +useParams().id;
     const [open, setOpen] = React.useState(false);
     const [openConfirmation, setOpenConfirmation] = React.useState(false);
@@ -28,7 +28,6 @@ const Task = () => {
     useEffect(() => {
         dispatch(getTodo())
     }, [dispatch])
-    const history = useHistory();
 
     const statusHandler = () => {
         const temp = [...todo];
@@ -37,12 +36,12 @@ const Task = () => {
         dispatch(updateTodo(updated.status, id))
     }
 
-    const handleChange = (val, name, index) => {
+    const handleChange = (value, name, index) => {
         const temp = [...todo];
         const updated = temp.find(item => item.id === id);
-        updated.subtask[+index] = val;
-        
-        name === "subtask" ? val = updated.subtask : val = val;
+        updated.subtask[+index] = value;
+        let val
+        name === "subtask" ? val = updated.subtask : val = value;
         console.log(val)
         dispatch(editTodo(name, val, id))
 

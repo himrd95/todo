@@ -58,7 +58,7 @@ export { postTodoRequest, postTodoSuccess, postTodoFailure };
 export const postTodo = (title) => async dispatch => {
     dispatch(postTodoRequest())
     try {
-        const res = await axios.post('https://him-app.herokuapp.com/posts', {
+        await axios.post('https://him-app.herokuapp.com/posts', {
             ...title,
             status: false
         });
