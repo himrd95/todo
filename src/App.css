@@ -1,0 +1,14 @@
+/** @format */
+body {
+	background-color: #fff6f6ee;
+}
+.App {
+	text-align: center;
+}
+
+h5 {
+	width: 200px;
+	text-align: left;
+	text-shadow: lawngreen;
+	font-size: 18px;
+}
