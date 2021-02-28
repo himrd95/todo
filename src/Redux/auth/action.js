@@ -104,7 +104,6 @@ export const login = (username, password) => async dispatch => {
 }
 
 export const getUserData = (username, token) => async dispatch => {
-    console.log(username, token)
     try {
         const res = await axios.get(
             `https://masai-api-mocker.herokuapp.com/user/${username}`, {

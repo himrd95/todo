@@ -1,5 +1,6 @@
 .cards {
 	max-width: 80%;
+	min-height: fit-content;
 	margin: 30px auto;
 	background: white;
 	box-shadow: 0 0 8px #b9b9b9;

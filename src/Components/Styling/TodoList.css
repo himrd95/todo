@@ -37,6 +37,7 @@
 }
 .mainCard {
 	width: 390px;
+	height: fit-content;
 	background: #eee;
 	box-shadow: 0 0 10px #2c2c2c;
 	border-radius: 3px;
