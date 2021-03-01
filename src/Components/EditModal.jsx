@@ -15,9 +15,13 @@ export default function AlertDialog({label, value, handleChange, name, index, ha
     };
     
     const handleClose = () => {
-        setOpen(false);
-        handleChange(newChanges, name, index)
-        handleSuccessMessage()
+        if (newChanges !== "") {
+          setOpen(false);
+          handleChange(newChanges, name, index)
+          handleSuccessMessage()
+        } else {
+          alert("Please type something.")
+        }
       };
 
   return (
@@ -27,7 +31,7 @@ export default function AlertDialog({label, value, handleChange, name, index, ha
       </div>
       <Dialog
         open={open}
-        onClose={handleClose}
+        onClose={()=>setOpen(false)}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >

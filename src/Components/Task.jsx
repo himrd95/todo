@@ -23,6 +23,7 @@ const Task = () => {
     const [openConfirmation, setOpenConfirmation] = React.useState(false);
     const [message, setMessage] = React.useState("")
     const auth = useSelector(state => state.auth.auth)
+    const [deleteId, SetDeleteId] = React.useState(0)
     
 
     useEffect(() => {
@@ -48,14 +49,18 @@ const Task = () => {
         setMessage(`Your ${name} was updated!`)
     }
 
-    const handleDelete = (i) => {
+    const handleOpenDelete = (i) => {
+        setOpenConfirmation(true)
+        SetDeleteId(+i)
+    }
+    const handleDelete = () => {
         const temp = [...todo];
         const updated = temp.find(item => item.id === id);
-        console.log(updated.subtask)
-        updated.subtask.splice(+i, 1)
+        console.log(updated.subtask, deleteId)
+        updated.subtask.splice(deleteId, 1)
         const name = "subtask"
         const val = updated.subtask
-        dispatch(editTodo(name, val, id))
+        dispatch(editTodo(name, val, deleteId))
         setMessage("Your Sub-task was deleted!")
         setOpenConfirmation(false)
         setOpen(true)
@@ -135,7 +140,7 @@ const Task = () => {
                                         handleSuccessMessage={handleSuccessMessage}
                                     />
                                     {/* <i class="fas fa-check-circle"></i> */}
-                                    <i onClick={()=>setOpenConfirmation(true)} class="fas fa-trash-alt"></i>
+                                    <i onClick={()=>handleOpenDelete(index)} class="fas fa-trash-alt"></i>
                                     <Dialog
                                         open={openConfirmation}
                                         TransitionComponent={Transition}
