@@ -39,5 +39,15 @@ npm install redux react-redux redux-thunk axios react-router-dom material-ui/@co
 6. New sub-task can be added if the user wanted to.
 7. Last but not least, the user can change the theme of the app.
 
-
+## Some of the snaps from the app
+### Login Page
+https://github.com/himrd95/todo/blob/main/public/login.png
+### Dashboard page
+https://github.com/himrd95/todo/blob/main/public/dashboard.png
+### Create new Task page
+https://github.com/himrd95/todo/blob/main/public/create.png
+### Task page 
+https://github.com/himrd95/todo/blob/main/public/task.png
+### Edit task page
+https://github.com/himrd95/todo/blob/main/public/edit.png
 I want to take this opportunity to thank you for visiting here.
