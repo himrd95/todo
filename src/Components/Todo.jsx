@@ -70,6 +70,9 @@ const Todo = () => {
                 }
             })
             setOpen(true);
+            
+            setSubTask([])
+            setSubtitle('')
         } else {
             alert("You must be login to create a new task")
             history.push("./login")

@@ -99,7 +99,7 @@ export const login = (username, password) => async dispatch => {
             success: true
         };
     } catch (err) {
-        return dispatch(login_failure(err));
+        return alert("Username or password is wrong");
     }
 }
 

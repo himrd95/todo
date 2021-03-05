@@ -27,6 +27,7 @@
 	margin-bottom: 5px;
 	cursor: pointer;
 	transition-delay: 3s;
+	width: 150px;
 }
 .hiddenText:hover {
 	color: blue;

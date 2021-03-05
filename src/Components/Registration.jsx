@@ -34,6 +34,7 @@ const Registration = () => {
         mobile !== "" && description !== "") {
             const action = create_account(details);
             dispatch(action)
+            alert("Your account was successfully created")
         } else {
             alert('All fields are required');
         }
