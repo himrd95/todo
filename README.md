@@ -41,13 +41,13 @@ npm install redux react-redux redux-thunk axios react-router-dom material-ui/@co
 
 ## Some of the snaps from the app
 ### Login Page
-![Login page](https://github.com/himrd95/todo/blob/main/public/login.png)
+![Login page](https://github.com/himrd95/todo/blob/master/public/login.png?raw=true)
 ### Dashboard page
-![Dashboard page](https://github.com/himrd95/todo/blob/main/public/dashboard.png)
+![Dashboard page](https://github.com/himrd95/todo/blob/master/public/dashboard.png?raw=true)
 ### Create new Task page
-![create new task page](https://github.com/himrd95/todo/blob/main/public/create.png)
+![create new task page](https://github.com/himrd95/todo/blob/master/public/create.png?raw=true)
 ### Task page 
-![Task page](https://github.com/himrd95/todo/blob/main/public/task.png)
+![Task page](https://github.com/himrd95/todo/blob/master/public/task.png?raw=true)
 ### Edit task page
-![Edit task page](https://github.com/himrd95/todo/blob/main/public/edit.png)
+![Edit task page](https://github.com/himrd95/todo/blob/master/public/edit.png?raw=true)
 I want to take this opportunity to thank you for visiting here.
