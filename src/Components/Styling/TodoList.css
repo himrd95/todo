@@ -1,0 +1,55 @@
+.dashboard {
+	display: flex;
+	justify-content: space-evenly;
+	padding: 50px;
+	margin-left: 50px;
+	flex-wrap: wrap;
+}
+.heading1 {
+	background: #dce775;
+	padding: 18px 22px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	border-bottom: 1px solid #b9b9b9;
+	font-size: 20px;
+	box-shadow: 0 5px 5px #b0bec5;
+	margin-bottom: 20px;
+}
+.heading2 {
+	background: #ffd54f;
+	padding: 18px 21px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	border-bottom: 1px solid #b9b9b9;
+	font-size: 20px;
+	box-shadow: 0 5px 5px #b0bec5;
+	margin-bottom: 20px;
+}
+.heading3 {
+	background: #81c784;
+	padding: 18px 21px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	border: 1px solid #b1afaf;
+	font-size: 20px;
+	box-shadow: 0 5px 5px #b0bec5;
+	margin-bottom: 20px;
+}
+.mainCard {
+	width: 390px;
+	height: fit-content;
+	background: #eee;
+	box-shadow: 0 0 10px #2c2c2c;
+	border-radius: 3px;
+	border: 1px solid #b9b9b9;
+	margin: 0 20px;
+	margin-bottom: 20px;
+}
+.mainCard:hover {
+	box-shadow: 0 0 15px rgb(0, 0, 0);
+}
+.addBtn {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+}

@@ -1,0 +1,84 @@
+.cards {
+	max-width: 80%;
+	min-height: fit-content;
+	margin: 30px auto;
+	background: white;
+	box-shadow: 0 0 8px #b9b9b9;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+.cards:hover {
+	box-shadow: 0 0 15px gray;
+	background: #fff8e1;
+}
+.top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	top: 0;
+	margin-bottom: 10px;
+	padding: 15px 10px;
+	border-bottom: 1px solid #b9b9b9;
+}
+.statusBtn {
+	border: none;
+	background: none;
+	font-size: 20px;
+	outline: none;
+	transition: .1s;
+	height: 25px;
+}
+.deleteBtn {
+	border: none;
+	background: none;
+	font-size: 20px;
+	color: tomato;
+	outline: none;
+	transition: .1s;
+	height: 25px;
+}
+.statusBtn:hover {
+	font-size: 23px;
+}
+.deleteBtn:hover {
+	color: red;
+	font-size: 23px;
+	animation: vibrate 0.3s infinite;
+}
+@keyframes vibrate {
+	from {
+		transform: rotate(-15deg);
+	}
+	to {
+		transform: rotate(15deg);
+	}
+}
+.title {
+	background-color: #2f3b53;
+	padding: 10px;
+	border-radius: 10px;
+	color: white;
+	font-weight: 600;
+}
+.description {
+	text-align: left;
+	font-weight: 600;
+	color: #5d4037;
+}
+.subtask {
+	background: #cfd8dc;
+	margin: 10px 0;
+	padding: 10px 0;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+}
+.subtask button {
+	size: 20px;
+	border: none;
+	background: none;
+	font-size: 20px;
+	margin: 0 20px;
+	outline: none;
+	color: green;
+}

@@ -1,0 +1,37 @@
+/** @format */
+
+.navbar {
+	height: 50px;
+	width: 98vw;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	/* color: aliceblue; */
+	padding-right: 40px;
+	align-items: center;
+	background: #ffe6e6;
+	position: fixed;
+	z-index: 1;
+}
+.headers {
+	text-decoration: none;
+	margin: 15px;
+	width: fit-content;
+	color: black;
+}
+.headers:hover {
+	color: blue;
+}
+.midHeaders {
+	display: flex;
+	align-items: center;
+}
+.useless {
+	height: 50px;
+}
+.themeBtn {
+	background: none;
+	border: none;
+	color: black;
+}
